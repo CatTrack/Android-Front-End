@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Design_App.iml" filepath="$PROJECT_DIR$/.idea/modules/Design_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Android-Front-End.iml" filepath="$PROJECT_DIR$/.idea/Android-Front-End.iml" />
     </modules>
   </component>
 </project>
