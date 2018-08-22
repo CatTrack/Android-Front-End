@@ -30,18 +30,14 @@ class MainActivity : AppCompatActivity() {
             catData.catName = "John Cena"
             catData.photoURI = "John Pic"
             System.out.println(JSON.stringify(catData))
-            val (_, _, result) =
-                Fuel.post("http://ptsv2.com/t/83ivw-1534863092/post", listOf(
-                        "data" to JSON.stringify(catData))).responseString()
-            result.fold(success = {
-                System.out.println("Ye")
-            },
-                failure = {
-                    System.out.println("Ne")
-                })
-        }
+            Fuel.post("https://us-central1-te-cattrack.cloudfunctions.net/newCat").body(JSON.stringify(catData)).response { request, response, result ->
+                System.out.println(request)
+                System.out.println(response)
+                System.out.println(result)
+            }
 
 
+    }
     }
 
 
