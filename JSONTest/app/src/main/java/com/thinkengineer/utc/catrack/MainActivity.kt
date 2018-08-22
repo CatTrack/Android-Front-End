@@ -7,6 +7,7 @@ import com.github.kittinunf.fuel.core.FuelManager
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JSON
+import java.nio.charset.Charset
 
 
 @Serializable
@@ -15,6 +16,8 @@ data class Data(var userID: String="", var catName: String="", var photoURI: Str
 @Serializable
 data class Cats(var cats: List<String>)
 
+@Serializable
+data class DocumentID(var documentid: String, var success: Boolean, var responsecode: Int)
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,9 +46,11 @@ class MainActivity : AppCompatActivity() {
         System.out.println(JSON.stringify(catData))
         FuelManager.instance.baseHeaders = mapOf("Content-Type" to "application/json")
         Fuel.post("https://us-central1-te-cattrack.cloudfunctions.net/newCat").body(JSON.stringify(catData)).response { request, response, result ->
-            System.out.println(request)
-            System.out.println(response)
-            System.out.println(result)
+            var rawString = response.data.toString(Charset.defaultCharset())
+            rawString = rawString.replace(" ", "")
+            rawString = rawString.toLowerCase()
+            var dataObject = JSON.parse<DocumentID>(rawString)
+            responseOutput.text = dataObject.documentid
         }
     }
 
@@ -56,7 +61,6 @@ class MainActivity : AppCompatActivity() {
         System.out.println(JSON.stringify(catData))
         FuelManager.instance.baseHeaders = mapOf("Content-Type" to "application/json")
         Fuel.get("https://us-central1-te-cattrack.cloudfunctions.net/getCats", listOf("userID" to catData.userID )).responseString { request, response, result ->
-            System.out.println(result)
             result.fold({ cats ->
                 System.out.println(cats)
                 /* Give object name so it matches Data class */
@@ -82,8 +86,7 @@ class MainActivity : AppCompatActivity() {
         System.out.println(JSON.stringify(catData))
         FuelManager.instance.baseHeaders = mapOf("Content-Type" to "application/json")
         Fuel.get("https://us-central1-te-cattrack.cloudfunctions.net/getCatLocation").body(JSON.stringify(catData)).response { request, response, result ->
-            System.out.println(request)
-            System.out.println(response)
-            System.out.println(result)
+            System.out.println(result.toString())
+
         }
 }}

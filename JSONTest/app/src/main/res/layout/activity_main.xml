@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -12,10 +13,13 @@
         android:layout_height="0dp"
         android:gravity="top"
         android:orientation="vertical"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <Space
             android:layout_width="match_parent"
@@ -24,7 +28,7 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="187dp"
+            android:layout_height="100dp"
             android:contentDescription="Logo"
             app:srcCompat="@drawable/logo"
             tools:layout_editor_absoluteY="163dp" />
@@ -69,6 +73,10 @@
             android:hint="Cat ID"
             android:inputType="textPersonName" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,7 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Get Cats"
+                android:background="@color/colorPrimaryDark"
+                android:text="Get\nCats"
                 tools:layout_editor_absoluteX="148dp"
                 tools:layout_editor_absoluteY="414dp" />
 
@@ -88,8 +97,11 @@
                 android:id="@+id/getCatLocation_Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="Get Cat Location"
+                android:background="@color/colorPrimaryDark"
+                android:text="Get Cat\nLocation"
                 tools:layout_editor_absoluteX="148dp"
                 tools:layout_editor_absoluteY="414dp" />
 
@@ -98,22 +110,73 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Cat"
+                android:background="@color/colorPrimaryDark"
+                android:text="New\nCat"
                 tools:layout_editor_absoluteX="148dp"
                 tools:layout_editor_absoluteY="414dp" />
 
         </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/newLocation_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="New\nLocation"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+            <Button
+                android:id="@+id/updateCatLocation_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="Update Cat\nLocation"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+            <Button
+                android:id="@+id/updateCat_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="Update\nCat"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@color/colorAccent">
 
             <TextView
                 android:id="@+id/responseOutput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center" />
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="18sp" />
         </ScrollView>
 
     </LinearLayout>
