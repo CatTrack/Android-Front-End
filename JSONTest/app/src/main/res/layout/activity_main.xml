@@ -61,13 +61,60 @@
             android:hint="Photo URI"
             android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/submitButton"
+        <EditText
+            android:id="@+id/catID_Field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="414dp" />
+            android:ems="10"
+            android:hint="Cat ID"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/getCats_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Get Cats"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+            <Button
+                android:id="@+id/getCatLocation_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Get Cat Location"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+            <Button
+                android:id="@+id/newCat_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New Cat"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/responseOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+        </ScrollView>
 
     </LinearLayout>
 
