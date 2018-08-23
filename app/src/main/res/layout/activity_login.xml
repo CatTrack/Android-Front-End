@@ -74,9 +74,14 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="match_parent"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="338dp"
         android:layout_height="wrap_content"
-        android:text="Sign In"/>
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:text="Sign In" />
 
     <Space
         android:layout_width="match_parent"
