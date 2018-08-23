@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="95dp"
+            android:layout_height="69dp"
+            android:layout_gravity="start"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/logo" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="30dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="142dp"
+                    android:background="@drawable/roundedrec"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+
+                    <ImageView
+                        android:id="@+id/cat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="30dp"
+                        android:translationZ="100dp"
+                        app:srcCompat="@drawable/cat1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
