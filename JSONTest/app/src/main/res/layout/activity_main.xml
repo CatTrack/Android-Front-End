@@ -89,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto"
                 android:text="Get\nCats"
                 tools:layout_editor_absoluteX="148dp"
                 tools:layout_editor_absoluteY="414dp" />
@@ -169,7 +170,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorAccent">
+            android:background="@color/colorAccent"
+            android:elevation="0dp">
 
             <TextView
                 android:id="@+id/responseOutput"
