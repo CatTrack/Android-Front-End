@@ -34,23 +34,85 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_height="129dp"
+                android:gravity="start"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="129dp"
+                    android:layout_height="131dp"
                     android:background="@drawable/roundedrec"
                     android:gravity="start"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/cat1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:paddingStart="30dp"
-                        app:srcCompat="@drawable/cat1" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="121dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/cat1"
+                            android:layout_width="220dp"
+                            android:layout_height="102dp"
+                            android:layout_weight="1"
+                            android:paddingStart="25dp"
+                            android:paddingTop="25dp"
+                            app:srcCompat="@drawable/cat3" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/open_sans_light"
+
+                                android:text="Jonathon"
+                                android:textColor="#707070"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:id="@+id/timestampJ"
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:layout_weight="1"
+                                android:contentDescription="timestamp"
+                                android:fontFamily="@font/open_sans_light"
+                                android:text="2 hours ago"
+                                android:textColor="#8B8B8B"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/location"
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/open_sans_light"
+                                android:text="      Back Door"
+                                android:textColor="#468DFC"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/specloc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="(inside)"
+                                android:textColor="#B0B0B0" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
