@@ -32,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
         displayName = findViewById<EditText>(R.id.displayName)
         status = findViewById<EditText>(R.id.status)
         badEmail = findViewById<EditText>(R.id.emailRegister)
-        email = inline fun badEmail.trim()
+        email = badEmail.trim()
         password = findViewById<EditText>(R.id.passwordRegister)
         registerButton = findViewById<Button>(R.id.registerActionButton)
 
