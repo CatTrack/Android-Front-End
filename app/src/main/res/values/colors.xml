@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
+
+    <!-- Switch Colors -->
+    <color name="disable_forground_grey">#000</color>
+    <color name="disable_thumb_gray">#000</color>
+    <color name="enable_thumb_green">#ff006e</color>
+    <color name="slightlyseethroughblack">#96000000</color>
+    <color name="invis">#00000000</color>
 </resources>

@@ -10,15 +10,20 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.HorizontalScrollView
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var displayName: TextView
     private lateinit var status: TextView
+    private lateinit var cat1Button: Button
+    private lateinit var backbutton: Button
     private lateinit var logout: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
@@ -33,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         displayName = findViewById<TextView>(R.id.nameTextView)
         status = findViewById<TextView>(R.id.statusTextView)
         logout = findViewById<Button>(R.id.singoutButton)
+        cat1Button = findViewById<Button>(R.id.cat1button)
+
+        cat1Button.setOnClickListener(){
+            setContentView(R.layout.activity_cat1profile)}
 
         logout.setOnClickListener(){
             auth.signOut()
@@ -40,10 +49,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
         isLogin()
 
     }
+
+
 
     private fun isLogin(){
         val intent = Intent(this@MainActivity, LoginActivity::class.java)
