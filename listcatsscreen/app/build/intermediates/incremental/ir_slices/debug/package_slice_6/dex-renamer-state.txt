@@ -1,0 +1,4 @@
+#Thu Aug 23 16:38:52 BST 2018
+base.0=/Users/oliverbeardsall/Google Drive (Personal)/UTC/Work Experience/Think Engineer/listcatsscreen/app/build/intermediates/transforms/dexMerger/debug/7
+path.0=classes.dex
+renamed.0=classes.dex
