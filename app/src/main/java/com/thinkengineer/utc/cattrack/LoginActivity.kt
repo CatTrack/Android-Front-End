@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         badEmail = findViewById<EditText>(R.id.email)
-        email = badEmail.trim()
+        email = inline fun badEmail.trim()
         password = findViewById<EditText>(R.id.password)
         loginButton = findViewById<Button>(R.id.loginButton)
         registerButtton = findViewById<Button>(R.id.registerButton)
