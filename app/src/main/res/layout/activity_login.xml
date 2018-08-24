@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.thinkengineer.utc.cattrack.LoginActivity"
+    android:background="#8338ec"
     android:gravity="center"
-    >
+    android:orientation="vertical"
+    tools:context="com.thinkengineer.utc.cattrack.LoginActivity">
 
 
     <ImageView
@@ -34,18 +34,17 @@
         android:id="@+id/EmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/email_address"
         android:gravity="center"
-        android:textSize="15sp"
-        android:textColor="#85849D"/>
+        android:text="@string/email_address"
+        android:textColor="@color/browser_actions_bg_grey"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint=""
-        android:textSize="15sp"
-        />
+        android:textSize="15sp" />
 
     <Space
         android:layout_width="match_parent"
@@ -55,18 +54,18 @@
         android:id="@+id/PasswordFeild"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/password"
-        android:textSize="15sp"
-        android:textColor="#85849D"
-        android:gravity="center"/>
+        android:textColor="@color/browser_actions_bg_grey"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint=""
-        android:textSize="15sp"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:textSize="15sp" />
 
     <Space
         android:layout_width="match_parent"
@@ -79,9 +78,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/colorAccent"
-        android:textColor="#fff"
         android:gravity="center"
-        android:text="Sign In" />
+        android:text="Sign In"
+        android:textColor="#fff" />
 
     <Space
         android:layout_width="match_parent"
@@ -93,6 +92,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#00000000"
-        android:textColor="#85849D"
-        android:text="@string/main_sign_up" />
+        android:text="@string/main_sign_up"
+        android:textColor="#85849D" />
 </LinearLayout>
