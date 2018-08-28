@@ -1,23 +1,19 @@
 package com.thinkengineer.utc.cattrack
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
-import android.widget.HorizontalScrollView
-import android.widget.LinearLayout
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Data(var userID: String="", var catName: String="", var photoURI: String="", var catID: String="")
 
 class MainActivity : AppCompatActivity() {
     private lateinit var displayName: TextView
@@ -81,6 +77,7 @@ class MainActivity : AppCompatActivity() {
                 .child(userId).addListenerForSingleValueEvent(dataListener)
 
     }
+
 
 
 }
