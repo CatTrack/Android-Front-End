@@ -20,9 +20,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        badEmail = emailfeild.text
+        badEmail = emailfeild.toString()
         email = badEmail.trim()
-        password = passwordfield.text
+        password = passwordfield.toString()
 
         registerButton.setOnClickListener{
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
         loginButton.setOnClickListener{
             auth = FirebaseAuth.getInstance()
-            auth.signInWithEmailAndPassword(emailfeild.text.toString(), passwordfeild.text.toString()).
+            auth.signInWithEmailAndPassword(emailfeild.text.toString(), passwordfield.text.toString()).
                     addOnCompleteListener { task: Task<AuthResult> ->
                         val intentToMain = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intentToMain)

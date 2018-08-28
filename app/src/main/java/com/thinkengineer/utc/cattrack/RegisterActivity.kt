@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 class RegisterActivity : AppCompatActivity() {
     private lateinit var displayName: EditText
     private lateinit var status: EditText
-    private lateinit var email: EditText
+    private lateinit var email: String
     private lateinit var password: EditText
     private lateinit var registerButton: Button
     private lateinit var auth:FirebaseAuth
@@ -33,12 +33,12 @@ class RegisterActivity : AppCompatActivity() {
         displayName = findViewById<EditText>(R.id.displayName)
         status = findViewById<EditText>(R.id.status)
         badEmail = findViewById<EditText>(R.id.emailRegister)
-        email = badEmail.trim()
+        email = badEmail.toString().trim()
         password = findViewById<EditText>(R.id.passwordRegister)
         registerButton = findViewById<Button>(R.id.registerActionButton)
 
         registerButton.setOnClickListener(){
-            auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString()).
+            auth.createUserWithEmailAndPassword(email.toString(), password.text.toString()).
                     addOnCompleteListener { task: Task<AuthResult> ->
                         if (task.isSuccessful){
                             val userId = auth.currentUser?.uid
