@@ -31,7 +31,7 @@
         android:layout_height="20dp" />
 
     <TextView
-        android:id="@+id/EmailAddress"
+        android:id="@+id/EmailLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -40,7 +40,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/emailfeild"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint=""
@@ -51,7 +51,7 @@
         android:layout_height="20dp" />
 
     <TextView
-        android:id="@+id/PasswordFeild"
+        android:id="@+id/passwordLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -60,7 +60,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordfield"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint=""

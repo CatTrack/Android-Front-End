@@ -8,33 +8,30 @@ import android.widget.EditText
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-    private lateinit var loginButton: Button
-    private lateinit var email: EditText
-    private lateinit var password: EditText
-    private lateinit var registerButtton: Button
+    private lateinit var email: String
+    private lateinit var password: String
+    private lateinit var badEmail: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
-        badEmail = findViewById<EditText>(R.id.email)
+        badEmail = emailfeild.text
         email = badEmail.trim()
-        password = findViewById<EditText>(R.id.password)
-        loginButton = findViewById<Button>(R.id.loginButton)
-        registerButtton = findViewById<Button>(R.id.registerButton)
+        password = passwordfield.text
 
-        registerButtton.setOnClickListener{
+        registerButton.setOnClickListener{
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         loginButton.setOnClickListener{
             auth = FirebaseAuth.getInstance()
-            auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString()).
+            auth.signInWithEmailAndPassword(emailfeild.text.toString(), passwordfeild.text.toString()).
                     addOnCompleteListener { task: Task<AuthResult> ->
                         val intentToMain = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intentToMain)

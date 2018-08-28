@@ -20,6 +20,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var auth:FirebaseAuth
     private lateinit var database:FirebaseDatabase
     private lateinit var dbRef: DatabaseReference
+    private lateinit var badEmail: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
