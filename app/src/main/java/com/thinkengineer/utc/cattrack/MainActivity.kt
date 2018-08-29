@@ -5,7 +5,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
+import com.thinkengineer.utc.cattrack.CatActivity;
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
 
@@ -40,8 +39,14 @@ class MainActivity : AppCompatActivity() {
         logout = findViewById<Button>(R.id.singoutButton)
         cat1Button = findViewById<Button>(R.id.cat1button)
 
-        cat1Button.setOnClickListener(){
-            setContentView(R.layout.activity_cat1profile)}
+        cat1Button.setOnClickListener({
+            @Override
+            fun onClick() {
+                val intent =  Intent(applicationContext, CatActivity::onCreate.javaClass)
+                        intent.putExtra("catNum", "0")
+                startActivity(intent)
+            }
+        })
 
         logout.setOnClickListener(){
             auth.signOut()
@@ -80,7 +85,4 @@ class MainActivity : AppCompatActivity() {
         database.reference.child("user")
                 .child(userId).addListenerForSingleValueEvent(dataListener)
 
-    }
-
-
-}
+    }}

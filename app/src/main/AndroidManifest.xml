@@ -9,19 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="com.thinkengineer.utc.cattrack.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.thinkengineer.utc.cattrack.LoginActivity" />
-        <activity android:name="com.thinkengineer.utc.cattrack.RegisterActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-    </application>
 
+        <activity
+            android:name=".CatActivity"
+            android:label="@string/title_activity_cat"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
