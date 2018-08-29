@@ -16,6 +16,9 @@ import android.graphics.Typeface
 import android.util.TypedValue
 import android.widget.LinearLayout.LayoutParams
 import android.widget.Toast
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.httpGet
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
     private lateinit var displayName: TextView
@@ -37,6 +40,12 @@ class MainActivity : AppCompatActivity() {
         status = findViewById<TextView>(R.id.statusTextView)
         logout = findViewById<Button>(R.id.singoutButton)
         cat1Button = findViewById<Button>(R.id.cat1button)
+
+         //do something with response
+            Fuel.get("https://us-central1-te-cattrack.cloudfunctions.net/getCatsAdv?userID=0").response { request, response, result ->
+                println(result)
+                val catsObject: JSONObject = result as JSONObject
+                }
 
         cat1Button.setOnClickListener(){
             setContentView(R.layout.activity_cat1profile)}
