@@ -43,6 +43,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/catsLayout"
                 android:layout_width="match_parent"
                 android:layout_height="129dp"
                 android:gravity="start"
@@ -77,8 +78,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="4dp"
                             android:layout_weight="1"
-                            android:text="     Jonathon"
                             android:gravity="center|top"
+                            android:text="     Jonathon"
                             android:textColor="#707070"
                             android:textSize="17dp" />
                     </LinearLayout>
@@ -109,8 +110,8 @@
                             android:layout_height="5dp"
                             android:layout_weight="1"
                             android:contentDescription="timestamp"
-                            android:text="2 hours ago"
                             android:gravity=""
+                            android:text="2 hours ago"
                             android:textColor="#8B8B8B"
                             android:textSize="14dp" />
 

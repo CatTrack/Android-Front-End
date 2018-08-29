@@ -1,23 +1,21 @@
 package com.thinkengineer.utc.cattrack
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.HorizontalScrollView
-import android.widget.LinearLayout
 import android.widget.TextView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.activity_main.*
+import android.graphics.Color
+import android.graphics.Typeface
+import android.util.TypedValue
+import android.widget.LinearLayout.LayoutParams
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var displayName: TextView
@@ -43,6 +41,42 @@ class MainActivity : AppCompatActivity() {
         cat1Button.setOnClickListener(){
             setContentView(R.layout.activity_cat1profile)}
 
+        val text_view: TextView = TextView(this)
+
+        // Creating a LinearLayout.LayoutParams object for text view
+        var params : LayoutParams = LayoutParams(
+                LayoutParams.MATCH_PARENT, // This will define text view width
+                LayoutParams.WRAP_CONTENT // This will define text view height
+        )
+
+        // Add margin to the text view
+        params.setMargins(10,10,10,10)
+
+        // Now, specify the text view width and height (dimension)
+        text_view.layoutParams = params
+
+        // Display some text on the newly created text view
+        text_view.text = "Cat"
+
+        // Set the text view font/text size
+        text_view.setTextSize(TypedValue.COMPLEX_UNIT_SP,30F)
+
+        // Set the text view text color
+        text_view.setTextColor(Color.WHITE)
+
+        // Change the text view background color
+        text_view.setBackgroundColor(Color.parseColor("#ff006e"))
+
+        // Put some padding on text view text
+        text_view.setPadding(50,10,10,10)
+
+        // Set a click listener for newly generated text view
+        text_view.setOnClickListener{
+            Toast.makeText(this,text_view.text,Toast.LENGTH_SHORT).show()
+        }
+
+        // Finally, add the text view to the view group
+        catsLayout.addView(text_view)
         logout.setOnClickListener(){
             auth.signOut()
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
@@ -65,7 +99,7 @@ class MainActivity : AppCompatActivity() {
     private fun loadData(userId: String){
         val dataListener = object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                return //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
